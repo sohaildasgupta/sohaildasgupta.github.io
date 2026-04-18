@@ -170,8 +170,8 @@ params:
 ###################################################################
 ################## multilanguage support options ##################
 ###################################################################
-languages:
-  en:
-    languageName:       English
-    weight:             1
+# languages:
+#   en:
+#     languageName:       English
+#     weight:             1
       
