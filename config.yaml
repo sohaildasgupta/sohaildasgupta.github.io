@@ -13,7 +13,7 @@ assetDir: "static"
 
 # Option to specify the default language of the theme
 # I.e., the landing language of your root 
-DefaultContentLanguage: en
+# DefaultContentLanguage: en
 
 ## Option to disable additional language in your site.
 # disableLanguages: ["ru"]
