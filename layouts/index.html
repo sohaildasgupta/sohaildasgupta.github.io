@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+  {{ $homepage := .Site.Params.homepage }}
+
+  <section class="hero is-fullheight is-default is-bold">
+    {{ partial "navbar.html" . }}
+    {{ partial "navbar-clone.html" . }}
+
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+
+          <div class="column is-5 is-offset-1 landing-caption">
+            <h1 class="title is-1 is-bold is-spaced">
+              {{ $homepage.title }}
+            </h1>
+
+            {{ with $homepage.subtitle }}
+              <h2 class="subtitle is-5 is-muted">{{ . }}</h2>
+            {{ end }}
+
+            {{/* ✅ THIS IS THE IMPORTANT PART */}}
+            {{ with $homepage.description }}
+              <div class="content">
+                {{ . | markdownify }}
+              </div>
+            {{ end }}
+          </div>
+
+          <div class="column is-5 is-offset-1">
+            <figure class="image">
+              <img src="{{ $homepage.image | relURL }}"
+                   style="width:{{ $homepage.imageWidth }}">
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+  {{ partial "sidebar.html" . }}
+
+{{ end }}
+
