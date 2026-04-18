@@ -1,5 +1,5 @@
 +++
-title = ''
+title = 'Home'
 date = 2026-02-26T22:18:21Z
 draft = false
 +++
